@@ -12,7 +12,6 @@ exports.createPages = async function ({ actions, graphql, reporter }) {
   if (result.errors) {
     reporter.panic("Error loading articles", JSON.stringify(result.errors))
   }
-  console.log("result: ", result)
 
   result.data.allContentfulArticle.nodes.forEach(article => {
     actions.createPage({

@@ -1,0 +1,28 @@
+@mixin base-font {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: $font;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+@mixin main-header-font {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: $font;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+@mixin secondary-header-font {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: $font;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+@mixin subheader-font {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: $font;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  font-style: italic;
+}

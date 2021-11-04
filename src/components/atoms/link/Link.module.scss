@@ -1,0 +1,8 @@
+@import "../../../common//style//variables/colours";
+
+.primary {
+  color: $primary;
+  &:hover {
+    text-decoration: underline;
+  }
+}

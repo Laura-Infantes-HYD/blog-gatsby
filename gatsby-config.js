@@ -2,7 +2,12 @@ require("dotenv").config()
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-sass`,
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        implementation: require("sass"),
+      },
+    },
     {
       resolve: `gatsby-source-contentful`,
       options: {

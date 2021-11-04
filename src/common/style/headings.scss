@@ -1,0 +1,11 @@
+h1 {
+  @include main-header-font;
+}
+
+h2 {
+  @include secondary-header-font;
+}
+
+h3 {
+  @include subheader-font;
+}

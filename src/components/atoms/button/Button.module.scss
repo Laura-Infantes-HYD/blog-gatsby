@@ -1,0 +1,12 @@
+@import "../../../common//style//variables/colours";
+
+.secondary {
+  color: $primary;
+  background-color: $primaryLight;
+}
+
+.primary {
+  background-color: $contrastLight;
+  color: $primary;
+  color: white;
+}
