@@ -1,0 +1,27 @@
+@import "../../../common/style/variables/colours";
+@import "../../../common/style/media-queries/media-queriees.mixins.scss";
+
+.horizontalNav {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0 0;
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.horizontalNav a {
+  padding-top: 0.75rem;
+  @include desktop {
+    padding-right: 1rem;
+  }
+}
+
+.horizontalNav a:not(:last-of-type) {
+  border-bottom: solid 1px $font;
+  padding-bottom: 0.75rem;
+  @include desktop {
+    flex-direction: row;
+    border-bottom: none;
+  }
+}

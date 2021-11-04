@@ -1,25 +1,13 @@
-import { Link } from "gatsby"
+import { Link as GatsbyLink } from "gatsby"
 import React from "react"
-import * as style from "./Button.module.scss"
+import * as style from "./Link.module.scss"
 
-let Button = ({
-  text,
-  className,
-  label,
-  onClick,
-  disabled = false,
-  children,
-}) => {
+let Link = ({ text, className, label, children, to }) => {
   return (
-    <Link
-      aria-label={label || text}
-      className={style[className]}
-      onClick={onClick}
-      disabled={disabled}
-    >
+    <GatsbyLink aria-label={label || text} className={style[className]} to={to}>
       {text || children}
-    </Link>
+    </GatsbyLink>
   )
 }
 
-export default Button
+export default Link

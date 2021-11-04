@@ -1,6 +1,6 @@
 import { graphql } from "gatsby"
 import React from "react"
-import Button from "../components/atoms/button/Button"
+import Button from "../components/atoms/Button/Button"
 import BasicPageLayout from "./BasicPageLayout"
 
 export const query = graphql`
