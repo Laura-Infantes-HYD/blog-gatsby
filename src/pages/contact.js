@@ -1,5 +1,10 @@
 import React from "react"
+import BasicPageLayout from "../templates/BasicPageLayout"
 
 export default function Contact() {
-  return <h1>Contact</h1>
+  return (
+    <BasicPageLayout>
+      <h1>Contact</h1>
+    </BasicPageLayout>
+  )
 }

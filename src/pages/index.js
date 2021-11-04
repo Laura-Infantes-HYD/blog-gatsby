@@ -1,5 +1,6 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
+import BasicPageLayout from "../templates/BasicPageLayout"
 
 export const query = graphql`
   {
@@ -17,12 +18,12 @@ export const query = graphql`
 
 export default function Home({ data }) {
   return (
-    <main>
+    <BasicPageLayout>
       {data.articles.nodes.map(article => (
         <div>
           <Link to={`article/${article.slug}`}>{article.title}</Link>
         </div>
       ))}
-    </main>
+    </BasicPageLayout>
   )
 }
