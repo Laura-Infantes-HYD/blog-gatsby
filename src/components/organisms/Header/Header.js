@@ -22,8 +22,8 @@ const Header = () => {
       {showNav && (
         <HorizontalNav>
           <Link to={`/`} text="home" />
-          <Link to={`blog`} text="blog" />
-          <Link to={`contact`} text="contact" />
+          <Link to={`/blog`} text="blog" />
+          <Link to={`/contact`} text="contact" />
         </HorizontalNav>
       )}
     </header>
