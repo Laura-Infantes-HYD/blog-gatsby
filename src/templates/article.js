@@ -1,6 +1,7 @@
 import { graphql } from "gatsby"
 import React from "react"
 import Button from "../components/atoms/Button/Button"
+import Link from "../components/atoms/Link/Link"
 import BasicPageLayout from "./BasicPageLayout"
 
 export const query = graphql`
@@ -29,11 +30,16 @@ export default function Article({ data: { article } }) {
 
   return (
     <BasicPageLayout>
-      <h1>{title}</h1>
-      <a href={author.site}>{author.name}</a>
-      <img src={image.file.url} alt={image.title} />
-      <Button text={"primary"} className={"primary"} />
-      <Button text={"secondary"} className={"secondary"} />
+      <h2>{title}</h2>
+      <h3>
+        <a href={author.site}>{author.name}</a>
+      </h3>
+      <img src={`${image.file.url}?w=800`} alt={image.title} />
+      <p>{content.content}</p>
+      <div>
+        <Link text={"go back"} to={"/"} />
+        <Button text={"secondary"} className={"secondary"} />
+      </div>
     </BasicPageLayout>
   )
 }
