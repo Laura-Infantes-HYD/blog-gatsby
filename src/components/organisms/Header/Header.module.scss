@@ -1,0 +1,18 @@
+@import "../../../common/style/media-queries/media-queriees.mixins.scss";
+@import "../../../common//style/variables/colours";
+
+.menu-btn {
+  display: inline-block;
+  background: transparent;
+  color: $primary;
+  padding: 0;
+  cursor: pointer;
+  @include desktop {
+    display: none;
+  }
+}
+
+.logo-menu--wrap {
+  display: flex;
+  justify-content: space-between;
+}

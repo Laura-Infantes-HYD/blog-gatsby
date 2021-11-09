@@ -1,5 +1,12 @@
+@import "./media-queries/media-queriees.mixins.scss";
+
 header {
   width: 100%;
   background-color: $primary;
   padding: 2rem 10%;
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
