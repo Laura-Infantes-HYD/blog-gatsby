@@ -1,11 +1,29 @@
+import { graphql, Link } from "gatsby"
 import React from "react"
-import "../common/style/_index.scss"
 import BasicPageLayout from "../templates/BasicPageLayout"
 
-export default function Blog() {
+export const query = graphql`
+  {
+    articles: allContentfulArticle {
+      nodes {
+        author {
+          name
+        }
+        slug
+        title
+      }
+    }
+  }
+`
+
+export default function Home({ data }) {
   return (
     <BasicPageLayout>
-      <h1>Blog</h1>
+      {data.articles.nodes.map(article => (
+        <div>
+          <Link to={`article/${article.slug}`}>{article.title}</Link>
+        </div>
+      ))}
     </BasicPageLayout>
   )
 }
